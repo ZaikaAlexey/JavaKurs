@@ -7,7 +7,7 @@ public class LoginForm extends JFrame {
     private JTextField loginField;
     private JPasswordField passwordField;
     private JButton loginButton;
-    private JPanel Авторизация;
+    private JPanel LoginPanel;
 
 
     public LoginForm() {
@@ -17,7 +17,7 @@ public class LoginForm extends JFrame {
         setLocationRelativeTo(null);
         setResizable(false);
 
-        setContentPane(Авторизация);   // панель из дизайнера
+        setContentPane(LoginPanel);   // панель из дизайнера
 
         loginButton.addActionListener(e -> authorize());
         passwordField.addActionListener(e -> authorize());

@@ -10,7 +10,7 @@
     </properties>
     <border type="none"/>
     <children>
-      <grid id="1bdd8" binding="mainPanel" layout-manager="GridLayoutManager" row-count="8" column-count="10" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+      <grid id="1bdd8" binding="mainPanel" layout-manager="GridLayoutManager" row-count="7" column-count="10" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints>
           <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -71,7 +71,7 @@
           </scrollpane>
           <scrollpane id="55eeb" binding="ResultPanel">
             <constraints>
-              <grid row="6" column="0" row-span="2" col-span="9" vsize-policy="7" hsize-policy="0" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+              <grid row="5" column="0" row-span="2" col-span="9" vsize-policy="7" hsize-policy="0" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <enabled value="false"/>
@@ -94,18 +94,26 @@
               </component>
             </children>
           </scrollpane>
-          <component id="5e48c" class="javax.swing.JLabel" binding="resultLabel">
+          <component id="16a07" class="javax.swing.JButton" binding="calculateButton">
             <constraints>
-              <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="7" anchor="1" fill="1" indent="0" use-parent-layout="false">
+                <minimum-size width="-1" height="40"/>
+              </grid>
             </constraints>
             <properties>
+              <background color="-13606756"/>
               <font name="Arial" size="18" style="1"/>
-              <text value="Label"/>
+              <foreground color="-2104859"/>
+              <hideActionText value="false"/>
+              <text value="Рассчитать по критерию Лапласа"/>
             </properties>
+            <clientProperties>
+              <hideActionText class="java.lang.Boolean" value="false"/>
+            </clientProperties>
           </component>
           <component id="be284" class="javax.swing.JButton" binding="saveButton">
             <constraints>
-              <grid row="2" column="1" row-span="1" col-span="6" vsize-policy="0" hsize-policy="7" anchor="1" fill="1" indent="0" use-parent-layout="false">
+              <grid row="2" column="1" row-span="1" col-span="6" vsize-policy="3" hsize-policy="7" anchor="1" fill="1" indent="0" use-parent-layout="false">
                 <minimum-size width="-1" height="40"/>
                 <preferred-size width="169" height="34"/>
               </grid>
@@ -120,9 +128,18 @@
               <text value="Сохранить результат"/>
             </properties>
           </component>
+          <component id="5e48c" class="javax.swing.JLabel" binding="resultLabel">
+            <constraints>
+              <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font name="Arial" size="18" style="1"/>
+              <text value="Label"/>
+            </properties>
+          </component>
           <component id="329c" class="javax.swing.JButton" binding="resetButton">
             <constraints>
-              <grid row="3" column="0" row-span="1" col-span="7" vsize-policy="0" hsize-policy="7" anchor="1" fill="1" indent="0" use-parent-layout="false">
+              <grid row="3" column="0" row-span="1" col-span="7" vsize-policy="3" hsize-policy="7" anchor="1" fill="1" indent="0" use-parent-layout="false">
                 <minimum-size width="2" height="40"/>
               </grid>
             </constraints>
@@ -133,23 +150,6 @@
               <horizontalTextPosition value="0"/>
               <text value="Cбросить данные"/>
             </properties>
-          </component>
-          <component id="16a07" class="javax.swing.JButton" binding="calculateButton">
-            <constraints>
-              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="7" anchor="1" fill="1" indent="0" use-parent-layout="false">
-                <minimum-size width="-1" height="40"/>
-              </grid>
-            </constraints>
-            <properties>
-              <background color="-13606756"/>
-              <font name="Arial" size="18" style="1"/>
-              <foreground color="-2104859"/>
-              <hideActionText value="false"/>
-              <text value="Рассчитать по критерию Лапласа"/>
-            </properties>
-            <clientProperties>
-              <hideActionText class="java.lang.Boolean" value="false"/>
-            </clientProperties>
           </component>
         </children>
       </grid>
