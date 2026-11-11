@@ -36,8 +36,10 @@ public class MainForm {
 
     public MainForm(boolean isAdmin) {
         this.isAdmin = isAdmin;
-        detailsArea.setEnabled(false);
-        detailsArea.setVisible(false);
+        detailsArea.setEnabled(true);
+        detailsArea.setVisible(true);
+        detailsArea.setRows(8);
+        detailsArea.setColumns(30);
         titleLabel.setText("Критерий Лапласа");
 
         resultLabel.setText("(Нажмите «Рассчитать» для получения ответа)");
@@ -74,7 +76,7 @@ public class MainForm {
 
         costTable.setModel(model);
         costTable.setRowHeight(28);
-        ResultPanel.setVisible(false);
+        ResultPanel.setVisible(true);
         detailsArea.setEditable(false);
         detailsArea.setLineWrap(true);
         detailsArea.setWrapStyleWord(true);
@@ -130,9 +132,6 @@ public class MainForm {
             int bestAlternative = -1;
 
             StringBuilder result = new StringBuilder();
-            ResultPanel.setVisible(true);
-            detailsArea.setEnabled(true);
-            detailsArea.setVisible(true);
             result.append("Расчёт по критерию Лапласа\n\n");
             result.append("Формула: L(Ai) = сумма затрат / 5\n\n");
 
@@ -174,6 +173,7 @@ public class MainForm {
                     )
             );
             detailsArea.setText(result.toString());
+            detailsArea.setCaretPosition(0);
 
             lastResult = resultLabel.getText()
                     + "\n\n"
@@ -247,9 +247,6 @@ public class MainForm {
         if (!isAdmin) {
             return;
         }
-        ResultPanel.setVisible(false);
-        detailsArea.setEnabled(false);
-        detailsArea.setVisible(false);
         int answer = JOptionPane.showConfirmDialog(
                 mainPanel,
                 "Вернуть исходные значения матрицы?",
